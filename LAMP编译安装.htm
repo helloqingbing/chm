@@ -1,0 +1,1018 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>LAMP编译安装</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.6001.23580">
+</HEAD>
+<BODY>
+<P>LAMP编译安装</P>
+<DIV 
+style="BORDER-BOTTOM: rgb(239,239,239) 1px solid; POSITION: relative; PADDING-BOTTOM: 23px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; ZOOM: 1; FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; PADDING-TOP: 21px; -webkit-text-stroke-width: 0px" 
+class="exp-title no-thumbs clearfix">
+<H1 
+style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: rgb(51,51,51); FONT-SIZE: 30px; FONT-WEIGHT: 400; PADDING-TOP: 0px" 
+title=CentOS编译安装LNMP环境>CentOS编译安装LNMP环境</H1>
+<UL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px/1.5 arial, 宋体, sans-serif; PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-info>
+  <LI 
+  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(153,153,153); PADDING-TOP: 0px">浏览：<SPAN 
+  class=views>1271</SPAN></LI>
+  <LI 
+  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(225,225,225); PADDING-TOP: 0px" 
+  class=blank>|</LI>
+  <LI 
+  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(153,153,153); PADDING-TOP: 0px">更新：<TIME>2013-12-11 
+  14:34</TIME></LI></UL></DIV>
+<DIV 
+style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+id=format-exp class="exp-content format-exp" alog-group="exp-content">
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" 
+class="exp-content-body exp-brief-step">
+<DIV style="POSITION: relative" class=exp-content-listblock>
+<DIV class=content-listblock-text>
+<P 
+style="PADDING-BOTTOM: 0px; MARGIN: 20px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">这里是教大家如何在centos下利用源码编译安装LNMP环境。</P>
+<P 
+style="PADDING-BOTTOM: 0px; MARGIN: 20px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></DIV></DIV></DIV>
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<H2 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
+href="javascript:;" name=section-2></A>工具/原料</H2>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
+<UL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
+class="exp-content-unorderlist ">
+  <LI 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-1">
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">centos服务器一台</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-2">
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">自用电脑一台</P></DIV></LI></UL></DIV></DIV>
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<H2 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
+href="javascript:;" name=section-3></A>准备篇</H2>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
+<OL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
+class=exp-conent-orderlist>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-1">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
+  class=list-icon>1</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置好IP、DNS 
+  、网关，确保使用远程连接工具能够连接服务器</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-2">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>2</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置防火墙，开启80端口、3306端口</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi&nbsp;/etc/sysconfig/iptables&nbsp;&nbsp;&nbsp;#编辑防火墙配置文件 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT（允许80端口通过防火墙） 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT（允许3306端口通过防火墙） 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">特别提示：很多网友把这两条规则添加到防火墙配置的最后一行，导致防火墙启动失败</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">正确的应该是添加到默认的22端口这条规则的下面，添加好之后防火墙规则如下所示：</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">######################################################### 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Firewall configuration written by system-config-firewall &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Manual customization of this file is not recommended. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">*filter 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:INPUT 
+  ACCEPT [0:0] &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:FORWARD 
+  ACCEPT [0:0] &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:OUTPUT 
+  ACCEPT [0:0] &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -p icmp -j ACCEPT &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -i lo -j ACCEPT &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT &nbsp; 
+&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT &nbsp; 
+&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  INPUT -j REJECT --reject-with icmp-host-prohibited &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  FORWARD -j REJECT --reject-with icmp-host-prohibited &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">COMMIT 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">######################################################### 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/init.d/iptables 
+  restart&nbsp;&nbsp;#最后重启防火墙使配置生效 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-3">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>3</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">关闭SELINUX</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi&nbsp;/etc/selinux/config&nbsp;&nbsp;#编辑</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#SELINUX=enforcing 
+  &nbsp; &nbsp; &nbsp; #注释掉&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#SELINUXTYPE=targeted 
+  &nbsp; &nbsp;#注释掉&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">SELINUX=disabled 
+  &nbsp; &nbsp; &nbsp; &nbsp; #增加&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq 
+  #保存退出</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">shutdown 
+  -r now &nbsp; #重启系统</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-4">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>4</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">系统约定</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">软件源代码包存放位置：/usr/local/src</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">源码包编译安装位置：/usr/local/软件名字</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-5">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>5</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">下载软件包</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">1.下载nginx</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp;http://nginx.org/download/nginx-1.2.0.tar.gz</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">2、下载pcre 
+  &nbsp;（支持nginx伪静态）</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.30.tar.gz</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">3、下载MySQL（目前稳定版）</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">http://mysql.mirror.kangaroot.net/Downloads/MySQL-5.5/mysql-5.5.25.tar.gz</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">由于版本更新可能以前版本已不存在，可http://mysql.mirror.kangaroot.net/Downloads下载相应版本。</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">4、下载php</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">http://www.php.net/releases/</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">5、下载cmake（MySQL编译工具）</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">http://www.cmake.org/files/v2.8/cmake-2.8.8.tar.gz</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">6、下载libmcrypt（PHPlibmcrypt模块）</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-6">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>6</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装编译工具及库文件（使用CentOS 
+  yum命令安装）</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">yum 
+  install make apr* autoconf automake curl-devel gcc gcc-c++ zlib-devel openssl 
+  openssl-devel pcre-devel gd &nbsp;kernel keyutils &nbsp;patch &nbsp;perl 
+  kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl 
+  keyutils-libs-devel libcom_err-devel libsepol-devel libselinux-devel 
+  krb5-devel zlib-devel libXpm* freetype libjpeg* libpng* php-common php-gd 
+  ncurses* libtool* libxml2 libxml2-devel patch&nbsp;freetype-devel</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
+  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
+  class=last-item><SPAN 
+  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
+  class=last-item-end>END</SPAN></DIV></LI></OL></DIV></DIV>
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<H2 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
+href="javascript:;" name=section-4></A>安装篇</H2>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
+<OL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
+class=exp-conent-orderlist>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-1">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
+  class=list-icon>1</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装cmake</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  zxvf cmake-2.8.8.tar.gz&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  cmake-2.8.8&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  make &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #编译&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp; #安装</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-2">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>2</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装MySQL</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">groupadd 
+  mysql &nbsp;#添加mysql组 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">useradd 
+  -g mysql mysql -s /bin/false &nbsp;#创建用户mysql并加入到mysql组，不允许mysql用户直接登录系统 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  -p /data/mysql &nbsp;#创建MySQL数据库存放目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chown 
+  -R mysql:mysql /data/mysql &nbsp; #设置MySQL数据库目录权限 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  -p /usr/local/mysql #创建MySQL安装目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  zxvf mysql-5.5.25.tar.gz &nbsp;#解压 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  mysql-5.5.25 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cmake 
+  . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql &nbsp;-DMYSQL_DATADIR=/data/mysql 
+  &nbsp;-DSYSCONFDIR=/etc &nbsp; #配置 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  #编译 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp;#安装 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/mysql &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  ./support-files/my-huge.cnf &nbsp;/etc/my.cnf &nbsp; 
+  #拷贝配置文件（注意：如果/etc目录下面默认有一个my.cnf，直接覆盖即可） &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /etc/my.cnf &nbsp; #编辑配置文件,在 [mysqld] 部分增加下面一行 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">datadir 
+  = /data/mysql &nbsp;#添加MySQL数据库路径 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  &nbsp;#保存退出 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./scripts/mysql_install_db 
+  --user=mysql &nbsp;#生成mysql系统数据库 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  ./support-files/mysql.server &nbsp;/etc/rc.d/init.d/mysqld &nbsp;#把Mysql加入系统启动 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  755 /etc/init.d/mysqld &nbsp; #增加执行权限 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  mysqld on &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /etc/rc.d/init.d/mysqld &nbsp;#编辑 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">basedir 
+  = /usr/local/mysql &nbsp; #MySQL程序安装路径 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">datadir 
+  = /data/mysql &nbsp;#MySQl数据库存放目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">service 
+  mysqld start &nbsp;#启动 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /etc/profile &nbsp; #把mysql服务加入系统环境变量：在最后添加下面这一行 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">export 
+  PATH=$PATH:/usr/local/mysql/bin &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  #保存退出 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">下面这两行把myslq的库文件链接到系统默认的位置，在编译类似PHP等软件时可以不用指定mysql的库文件地址。 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  -s /usr/local/mysql/lib/mysql /usr/lib/mysql &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  -s /usr/local/mysql/include/mysql /usr/include/mysql &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">shutdown 
+  -r now &nbsp; &nbsp; #需要重启系统，等待系统重新启动之后继续在终端命令行下面操作 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mysql_secure_installation 
+  &nbsp; &nbsp;#设置Mysql密码 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">根据提示按Y 
+  回车（默认密码为空） &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">然后输入2次密码 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">继续按Y 
+  回车，直到设置完成 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">或者直接修改密码/usr/local/mysql/bin/mysqladmin 
+  -u root -p password "123456" #修改密码 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">service 
+  mysqld restart &nbsp;#重启 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">到此，mysql安装完成！ 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-3">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>3</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装pcre</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  /usr/local/pcre &nbsp;#创建安装目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  &nbsp;zxvf pcre-8.30.tar.gz &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  pcre-8.30 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  &nbsp;--prefix=/usr/local/pcre &nbsp;#配置 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-4">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>4</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装 
+  nginx</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">groupadd 
+  &nbsp;www &nbsp;#添加www组 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">useradd 
+  -g &nbsp;www www -s /bin/false &nbsp;#创建nginx运行账户www并加入到www组，不允许www用户直接登录系统 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  &nbsp;zxvf nginx-1.2.0.tar.gz &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  nginx-1.2.0 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  --prefix=/usr/local/nginx --without-http_memcached_module --user=www 
+  --group=www --with-http_stub_status_module --with-openssl=/usr/ 
+  --with-pcre=/usr/local/src/pcre-8.30 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#注意:--with-pcre=/usr/local/src/pcre-8.30指向的是源码包解压的路径，而不是安装的路径，否则会报错 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/usr/local/nginx/sbin/nginx 
+  &nbsp; #启动nginx &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /etc/rc.d/init.d/nginx &nbsp; &nbsp;#设置nginx开启启动，编辑启动文件添加下面内容 &nbsp; 
+&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">################################################################# 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#!/bin/bash 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  nginx Startup script for the Nginx HTTP Server &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  it is v.0.0.2 version. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  chkconfig: - 85 15 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  description: Nginx is a high-performance web and proxy server. &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;It has a lot of features, but 
+  it's not for everyone. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  processname: nginx &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  pidfile: /var/run/nginx.pid &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  config: /usr/local/nginx/conf/nginx.conf &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginxd=/usr/local/nginx/sbin/nginx 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginx_config=/usr/local/nginx/conf/nginx.conf 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginx_pid=/usr/local/nginx/logs/nginx.pid 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">RETVAL=0 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">prog="nginx" 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Source function library. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">. 
+  &nbsp;/etc/rc.d/init.d/functions &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Source networking configuration. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">. 
+  &nbsp;/etc/sysconfig/network &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Check that networking is up. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">[ 
+  ${NETWORKING} = "no" ] &amp;amp;&amp;amp; exit 0 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">[ 
+  -x $nginxd ] || exit 0 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Start nginx daemons functions. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">start() 
+  { &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">if 
+  [ -e $nginx_pid ];then &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  echo "nginx already running...." &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  exit 1 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">fi 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  echo -n $"Starting $prog: " &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  daemon $nginxd -c ${nginx_config} &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  RETVAL=$? &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  echo &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  [ $RETVAL = 0 ] &amp;amp;&amp;amp; touch /var/lock/subsys/nginx &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  return $RETVAL &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  Stop nginx daemons functions. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">stop() 
+  { &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;echo -n $"Stopping $prog: " &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;killproc $nginxd &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;echo &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;[ $RETVAL = 0 ] &amp;amp;&amp;amp; rm -f 
+  /var/lock/subsys/nginx /usr/local/nginx/logs/nginx.pid &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">reload() 
+  { &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;echo -n $"Reloading $prog: " &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;#kill -HUP `cat ${nginx_pid}` &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;killproc $nginxd -HUP &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;echo &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  See how we were called. &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">case 
+  "$1" in &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">start) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;start &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">stop) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;stop &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">reload) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;reload &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">restart) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;stop &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;start &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">status) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;status $prog &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">*) 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;echo $"Usage: $prog 
+  {start|stop|restart|reload|status|help}" &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp; &nbsp; &nbsp;exit 1 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">esac 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">exit 
+  $RETVAL &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">################################################################# 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  &nbsp;#保存退出 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  775 &nbsp;/etc/rc.d/init.d/nginx &nbsp;#赋予文件执行权限 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  nginx on &nbsp; &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/rc.d/init.d/nginx 
+  restart &nbsp; #重启 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-5">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>5</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装libmcrypt</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  zxvf &nbsp;libmcrypt-2.5.7.tar.gz &nbsp; #解压 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  &nbsp;libmcrypt-2.5.7 #进入目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  &nbsp; &nbsp;#配置 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #编译 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp; #安装 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-6">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>6</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装php</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  /usr/local/src &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  -zvxf php-5.3.13.tar.gz &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  &nbsp;php-5.3.13 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  -p /usr/local/php5 &nbsp;#建立php安装目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  --prefix=/usr/local/php5 --with-config-file-path=/usr/local/php5/etc 
+  --with-mysql=/usr/local/mysql --with-mysqli=/usr/local/mysql/bin/mysql_config 
+  --with-mysql-sock=/tmp/mysql.sock --with-gd --with-iconv &nbsp;--with-zlib 
+  &nbsp;--enable-xml --enable-magic-quotes --enable-safe-mode --enable-bcmath 
+  --enable-shmop --enable-sysvsem --enable-inline-optimization 
+  --with-curlwrappers --enable-mbregex &nbsp;--enable-fpm --enable-mbstring 
+  --enable-ftp --enable-gd-native-ttf --with-openssl --enable-pcntl 
+  --enable-sockets --with-xmlrpc --enable-zip --enable-soap --without-pear 
+  --with-gettext --enable-session --with-mcrypt --with-curl --with-jpeg-dir 
+  --with-freetype-dir #配置 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  &nbsp; #编译 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  install &nbsp; &nbsp;#安装 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  &nbsp;php.ini-production &nbsp; /usr/local/php5/etc/php.ini 
+  &nbsp;#复制php配置文件到安装目录 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">rm 
+  -rf /etc/php.ini &nbsp; #删除系统自带配置文件 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  -s /usr/local/php5/etc/php.ini &nbsp;/etc/php.ini &nbsp; &nbsp;#添加软链接 &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  &nbsp;/usr/local/php5/etc/php-fpm.conf.default &nbsp; 
+  /usr/local/php5/etc/php-fpm.conf &nbsp; &nbsp; &nbsp;#拷贝模板文件为php-fpm配置文件 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  &nbsp;/usr/local/php5/etc/php-fpm.conf &nbsp;#编辑 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">user 
+  = www &nbsp; &nbsp;#设置php-fpm运行账号为www &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">group 
+  = www &nbsp; #设置php-fpm运行组为www &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">pid 
+  = run/php-fpm.pid &nbsp; &nbsp;#取消前面的分号 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  /usr/local/src/php-5.3.13/sapi/fpm/init.d.php-fpm &nbsp; 
+  /etc/rc.d/init.d/php-fpm &nbsp;#设置 php-fpm开机启动，拷贝php-fpm到启动目录 &nbsp; 
+&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  +x /etc/rc.d/init.d/php-fpm &nbsp;#添加执行权限 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  php-fpm on &nbsp; &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /usr/local/php5/etc/php.ini &nbsp; &nbsp;#编辑配置文件 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：disable_functions 
+  = &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：disable_functions 
+  = 
+  passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,escapeshellcmd,dll,popen,disk_free_space,checkdnsrr,checkdnsrr,getservbyname,getservbyport,disk_total_space,posix_ctermid,posix_get_last_error,posix_getcwd, 
+  posix_getegid,posix_geteuid,posix_getgid, 
+  posix_getgrgid,posix_getgrnam,posix_getgroups,posix_getlogin,posix_getpgid,posix_getpgrp,posix_getpid, 
+  posix_getppid,posix_getpwnam,posix_getpwuid, posix_getrlimit, 
+  posix_getsid,posix_getuid,posix_isatty, 
+  posix_kill,posix_mkfifo,posix_setegid,posix_seteuid,posix_setgid, 
+  posix_setpgid,posix_setsid,posix_setuid,posix_strerror,posix_times,posix_ttyname,posix_uname 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#列出PHP可以禁用的函数，如果某些程序需要用到这个函数，可以删除，取消禁用。 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：;date.timezone 
+  = &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：date.timezone 
+  = PRC &nbsp; #设置时区 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：expose_php 
+  = On &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：expose_php 
+  = OFF &nbsp;#禁止显示php版本的信息 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">PS：在编译PHP的过程中可能会报UNDEFINED 
+  REFERENCE TO `LIBICONV_OPEN 无法编译PHP LIBICONV错误.</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
+  class="exp-content-list list-item-7">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
+  class=list-icon>7</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置nginx支持php</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  /usr/local/nginx/conf/nginx.conf &nbsp; &nbsp; &nbsp;#编辑配置文件 &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">user 
+  &nbsp; www &nbsp;www; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp;#首行user去掉注释,修改Nginx运行组为www 
+  www；必须与/usr/local/php5/etc/php-fpm.conf中的user,group配置相同，否则php运行出错 &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">index 
+  &nbsp;index.php &nbsp;index.html index.htm; &nbsp; &nbsp;#添加index.php &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000 &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">location 
+  ~ \.php$ { &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  html;#此处和server下面root保持一致,默认为html &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;fastcgi_pass &nbsp; 127.0.0.1:9000; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;fastcgi_index &nbsp;index.php; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;fastcgi_param &nbsp;SCRIPT_FILENAME &nbsp; 
+  /usr/local/nginx/html/$fastcgi_script_name; &nbsp; &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  &nbsp;include &nbsp; &nbsp; &nbsp; &nbsp;fastcgi_params;&nbsp; &nbsp; 
+  &nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">注意：取消FastCGI 
+  server部分location的注释,并要注意fastcgi_param行的参数,改为/data/webroot/(此为网站根目录绝对路径)$fastcgi_script_name</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/init.d/nginx 
+  restart &nbsp;#重启nginx</P></DIV>
+  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
+  class=last-item><SPAN 
+  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
+  class=last-item-end>END</SPAN></DIV></LI></OL></DIV></DIV>
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<H2 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
+href="javascript:;" name=section-5></A>测试篇</H2>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
+<OL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
+class=exp-conent-orderlist>
+  <LI 
+  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-1">
+  <DIV 
+  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
+  class=list-icon>1</DIV>
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">访问http://ip地址&nbsp;&nbsp; 
+  &nbsp;出现欢迎使用nginx，说明配置成功。默认web目录&nbsp;/usr/local/nginx/html/可以自己写程序测试PHP是否可用。</P></DIV>
+  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
+  class=last-item><SPAN 
+  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
+  class=last-item-end>END</SPAN></DIV></LI></OL></DIV></DIV>
+<DIV 
+style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
+class=exp-content-block>
+<H2 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
+class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
+href="javascript:;" name=section-6></A>注意事项</H2>
+<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
+<UL 
+style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
+class="exp-content-unorderlist ">
+  <LI 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-1">
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">操作系统：CentOS 
+  6.2 32位</P></DIV></LI>
+  <LI 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
+  class="exp-content-list list-item-2">
+  <DIV class=content-list-text>
+  <P 
+  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">源码的下载地址由于版本更新可能有变化，请大家自行百度下载</P></DIV></LI></UL></DIV></DIV></DIV></BODY></HTML>
