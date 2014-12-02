@@ -1,8 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD><TITLE>centos最小化安装配置</TITLE>
 <META content="text/html; charset=gb2312" http-equiv=Content-Type>
-<META name=GENERATOR content="MSHTML 8.00.6001.23580">
-</HEAD>
+<META name=GENERATOR content="MSHTML 8.00.6001.23580"></HEAD>
 <BODY>
 <P>centos最小化安装配置</P><ARTICLE 
 style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 12px/18px 'microsoft yahei', Tahoma, Helvetica, SimSun, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
@@ -25,7 +24,7 @@ href="http://www.lvtao.net/sort/server">服务器</A></DIV>
 style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5em; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; WORD-WRAP: break-word; FONT-SIZE: 14px; WORD-BREAK: normal; PADDING-TOP: 0px" 
 class=content><STRONG>本文 centos 6.5 优化 
 的项有18处:</STRONG><BR>1、centos6.5最小化安装后启动网卡<BR>2、ifconfig查询IP进行SSH链接<BR>3、更新系统源并且升级系统<BR>4、系统时间更新和设定定时任<BR>5、修改ip地址、网关、主机名、DNS<BR>6、关闭selinux，清空iptables<BR>7、创建普通用户并进行sudo授权管理<BR>8、修改SSH端口号和屏蔽root账号远程登陆<BR>9、锁定关键文件系统（禁止非授权用户获得权限）<BR>10、精简开机自启动服务<BR>11、调整系统文件描述符大小<BR>12、设置系统字符集<BR>13、清理登陆的时候显示的系统及内核版本<BR>14、内核参数优化<BR>15、定时清理/var/spool/clientmqueue<BR>16、删除不必要的系统用户和群组<BR>17、关闭重启ctl-alt-delete组合键<BR>18、设置一些全局变量<SPAN 
-class=Apple-converted-space>&nbsp;</SPAN><BR><STRONG>1、启动网卡</STRONG><PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">#centos6.x最小化安装后，网卡默认不是启动状态
+class=Apple-converted-space>&nbsp;</SPAN><BR><STRONG>1、启动网卡</STRONG><PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">#centos6.x最小化安装后，网卡默认不是启动状态(本地虚拟机最小化安装，默认是不启动的，网卡模式选桥接，然后执行以下命令就可以连网了)
 ifup eth0</PRE><STRONG>2、SSH链接 ifconfig 查看IP后SSH终端连接。</STRONG><SPAN 
 class=Apple-converted-space>&nbsp;</SPAN><BR><STRONG>3、更新源 
 最小化安装是没有wget工具的，必须先安装在修改源)</STRONG><PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">yum install wget</PRE>备份原系统更新源<PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</PRE>进入yum.repos.d目录<PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">cd /etc/yum.repos.d</PRE>下载网易镜像源或者搜狐镜像源<PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">#下载网易镜像源：
@@ -74,22 +73,21 @@ multi on
 nospoof on</PRE><STRONG>重启网卡生效设置两种方法</STRONG><PRE style="BORDER-BOTTOM: rgb(225,225,225) 1px dotted; BORDER-LEFT: rgb(225,225,225) 4px solid; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5em; BACKGROUND-COLOR: rgb(249,249,249); MARGIN: 2px 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT-FAMILY: 'Courier New', Courier, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; OVERFLOW: hidden; BORDER-TOP: rgb(225,225,225) 1px dotted; BORDER-RIGHT: rgb(225,225,225) 1px dotted; PADDING-TOP: 6px; border-image-source: none">service network restart
 或者
 /etc/init.d/network restart</PRE><STRONG>6、关闭selinux，清空iptables 
-在服务器配置完全成功后各项服务正常后，在开启selinux</STRONG><BR><STRONG>查看selinux状态</STRONG>
+在服务器配置完全成功后各项服务正常后，在开启selinux</STRONG><BR><STRONG>查看selinux状态</STRONG> 
 <UL 
 style="PADDING-BOTTOM: 0px; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
   <LI style="FONT-STYLE: normal">第一种方法：/usr/bin/setstatus -v #如果显示：SELinux 
-  status: enabled 就是开启状态</LI>
+  status: enabled 就是开启状态 
   <LI style="FONT-STYLE: normal">第二种方法：cat /etc/selinux/config 
-  #如果显示：SELINUX=enforcing 则是开启状态permissive有提醒的状态 disabled是关闭</LI>
-  <LI style="FONT-STYLE: normal">第三种方法：grep SELINUX=disabled 
-  /etc/selinux/config</LI>
+  #如果显示：SELINUX=enforcing 则是开启状态permissive有提醒的状态 disabled是关闭 
+  <LI style="FONT-STYLE: normal">第三种方法：grep SELINUX=disabled /etc/selinux/config 
+
   <LI 
 style="FONT-STYLE: normal">第四种方法：getenforce</LI></UL><STRONG>修改selinux状态</STRONG><SPAN 
-class=Apple-converted-space>&nbsp;</SPAN>如果修改配置文件则永久生效，但是必须要重启系统
+class=Apple-converted-space>&nbsp;</SPAN>如果修改配置文件则永久生效，但是必须要重启系统 
 <UL 
 style="PADDING-BOTTOM: 0px; FONT-STYLE: normal; MARGIN: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">
-  <LI style="FONT-STYLE: normal">第一种：vi /etc/selinux/config 修改 
-  SELINUX=disabled</LI>
+  <LI style="FONT-STYLE: normal">第一种：vi /etc/selinux/config 修改 SELINUX=disabled 
   <LI style="FONT-STYLE: normal">第二种：sed –i 
   ‘s/SELINUX=enforcing/SELINUX=disabled/g’ 
 /etc/selinux/config</LI></UL>如果想立即生效（如果想临时性的改变） setenforce 0<SPAN 

@@ -2832,4 +2832,11 @@
 <PARAM NAME="Local" VALUE="centos最小化安装配置.htm">
 </OBJECT>
 </UL>
+<UL>
+<LI><OBJECT TYPE="text/sitemap">
+<PARAM NAME="Name" VALUE="vi用法">
+<PARAM NAME="Local" VALUE="vi用法.htm">
+<PARAM NAME="ImageNumber" value="11">
+</OBJECT>
+</UL>
 </UL></body></html>
