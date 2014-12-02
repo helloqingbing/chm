@@ -1,339 +1,308 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML><HEAD><TITLE>LAMP编译安装</TITLE>
 <META content="text/html; charset=gb2312" http-equiv=Content-Type>
-<META name=GENERATOR content="MSHTML 8.00.6001.23580"></HEAD>
+<META name=GENERATOR content="MSHTML 10.00.9200.17148"></HEAD>
 <BODY>
 <P>LAMP编译安装</P>
-<DIV 
-style="BORDER-BOTTOM: rgb(239,239,239) 1px solid; POSITION: relative; PADDING-BOTTOM: 23px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; ZOOM: 1; FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; PADDING-TOP: 21px; -webkit-text-stroke-width: 0px" 
-class="exp-title no-thumbs clearfix">
-<H1 
-style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: rgb(51,51,51); FONT-SIZE: 30px; FONT-WEIGHT: 400; PADDING-TOP: 0px" 
-title=CentOS编译安装LNMP环境>CentOS编译安装LNMP环境</H1>
-<UL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px/1.5 arial, 宋体, sans-serif; PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-info>
+<DIV class="exp-title no-thumbs clearfix" 
+style="WHITE-SPACE: normal; BORDER-BOTTOM: rgb(239,239,239) 1px solid; POSITION: relative; TEXT-TRANSFORM: none; WORD-SPACING: 0px; ZOOM: 1; COLOR: rgb(0,0,0); PADDING-BOTTOM: 23px; PADDING-TOP: 21px; FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">
+<H1 title=CentOS编译安装LNMP环境 
+style="FONT-SIZE: 30px; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">CentOS编译安装LNMP环境</H1>
+<UL class=exp-info 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 12px/1.5 arial, 宋体, sans-serif; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; font-stretch: normal">
   <LI 
-  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(153,153,153); PADDING-TOP: 0px">浏览：<SPAN 
+  style="HEIGHT: 22px; FLOAT: left; COLOR: rgb(153,153,153); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px">浏览：<SPAN 
   class=views>1271</SPAN> </LI>
+  <LI class=blank 
+  style="HEIGHT: 22px; FLOAT: left; COLOR: rgb(225,225,225); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 10px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px">| 
+  </LI>
   <LI 
-  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(225,225,225); PADDING-TOP: 0px" 
-  class=blank>| </LI>
-  <LI 
-  style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 22px; COLOR: rgb(153,153,153); PADDING-TOP: 0px">更新：<TIME>2013-12-11 
+  style="HEIGHT: 22px; FLOAT: left; COLOR: rgb(153,153,153); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 22px; PADDING-RIGHT: 0px">更新：<TIME>2013-12-11 
   14:34</TIME></LI></UL></DIV>
-<DIV 
-style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
-id=format-exp class="exp-content format-exp" alog-group="exp-content">
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" 
-class="exp-content-body exp-brief-step">
-<DIV style="POSITION: relative" class=exp-content-listblock>
+<DIV id=format-exp class="exp-content format-exp" 
+style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(0,0,0); FONT: 12px/18px 'Microsoft Yahei', 微软雅黑, arial, 宋体, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" 
+alog-group="exp-content">
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<DIV class="exp-content-body exp-brief-step" 
+style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<DIV class=exp-content-listblock style="POSITION: relative">
 <DIV class=content-listblock-text>
 <P 
-style="PADDING-BOTTOM: 0px; MARGIN: 20px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">这里是教大家如何在centos下利用源码编译安装LNMP环境。</P>
+style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 20px 0px; PADDING-RIGHT: 0px">这里是教大家如何在centos下利用源码编译安装LNMP环境。</P>
 <P 
-style="PADDING-BOTTOM: 0px; MARGIN: 20px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV></DIV></DIV></DIV>
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<H2 
-style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
-href="javascript:;" name=section-2></A>工具/原料</H2>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
-<UL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class="exp-content-unorderlist ">
-  <LI 
-  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
+style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 20px 0px; PADDING-RIGHT: 0px"></P></DIV></DIV></DIV></DIV>
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<H2 class=exp-content-head 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; COLOR: rgb(51,51,51); PADDING-BOTTOM: 7px; PADDING-TOP: 0px; FONT: 400 22px/24px 微软雅黑; PADDING-LEFT: 0px; MARGIN: 40px 0px 0px; PADDING-RIGHT: 0px; font-stretch: normal"><A 
+style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" href="javascript:;" 
+name=section-2></A>工具/原料</H2>
+<DIV class=exp-content-body style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<UL class="exp-content-unorderlist " 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-1" 
+  style="BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 25px; MARGIN: 0px; MIN-HEIGHT: 31px; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">centos服务器一台</P></DIV>
-  <LI 
-  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-2">
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">centos服务器一台</P></DIV>
+  <LI class="exp-content-list list-item-2" 
+  style="BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 25px; MARGIN: 0px; MIN-HEIGHT: 31px; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">自用电脑一台</P></DIV></LI></UL></DIV></DIV>
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<H2 
-style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
-href="javascript:;" name=section-3></A>准备篇</H2>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
-<OL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class=exp-conent-orderlist>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
-  class=list-icon>1</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">自用电脑一台</P></DIV></LI></UL></DIV></DIV>
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<H2 class=exp-content-head 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; COLOR: rgb(51,51,51); PADDING-BOTTOM: 7px; PADDING-TOP: 0px; FONT: 400 22px/24px 微软雅黑; PADDING-LEFT: 0px; MARGIN: 40px 0px 0px; PADDING-RIGHT: 0px; font-stretch: normal"><A 
+style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" href="javascript:;" 
+name=section-3></A>准备篇</H2>
+<DIV class=exp-content-body style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<OL class=exp-conent-orderlist 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-1" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 35px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 0px; VISIBILITY: visible; WIDTH: 32px">1</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置好IP、DNS 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">配置好IP、DNS 
   、网关，确保使用远程连接工具能够连接服务器</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-2">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>2</DIV>
+  <LI class="exp-content-list list-item-2" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">2</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置防火墙，开启80端口、3306端口</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">配置防火墙，开启80端口、3306端口</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi&nbsp;/etc/sysconfig/iptables&nbsp;&nbsp;&nbsp;#编辑防火墙配置文件 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi&nbsp;/etc/sysconfig/iptables&nbsp;&nbsp;&nbsp;#编辑防火墙配置文件 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT（允许80端口通过防火墙） 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT（允许3306端口通过防火墙） 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">特别提示：很多网友把这两条规则添加到防火墙配置的最后一行，导致防火墙启动失败</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">特别提示：很多网友把这两条规则添加到防火墙配置的最后一行，导致防火墙启动失败</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">正确的应该是添加到默认的22端口这条规则的下面，添加好之后防火墙规则如下所示：</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">正确的应该是添加到默认的22端口这条规则的下面，添加好之后防火墙规则如下所示：</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">######################################################### 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">######################################################### 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Firewall configuration written by system-config-firewall &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Manual customization of this file is not recommended. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">*filter 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">*filter 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:INPUT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:INPUT 
   ACCEPT [0:0] &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:FORWARD 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:FORWARD 
   ACCEPT [0:0] &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:OUTPUT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:OUTPUT 
   ACCEPT [0:0] &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -p icmp -j ACCEPT &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -i lo -j ACCEPT &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT &nbsp; 
 &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT &nbsp; 
 &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   INPUT -j REJECT --reject-with icmp-host-prohibited &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">-A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">-A 
   FORWARD -j REJECT --reject-with icmp-host-prohibited &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">COMMIT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">COMMIT 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">######################################################### 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">######################################################### 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/init.d/iptables 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">/etc/init.d/iptables 
   restart&nbsp;&nbsp;#最后重启防火墙使配置生效 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-3">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>3</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-3" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">3</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">关闭SELINUX</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">关闭SELINUX</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi&nbsp;/etc/selinux/config&nbsp;&nbsp;#编辑</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi&nbsp;/etc/selinux/config&nbsp;&nbsp;#编辑</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#SELINUX=enforcing 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">#SELINUX=enforcing 
   &nbsp; &nbsp; &nbsp; #注释掉&nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#SELINUXTYPE=targeted 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">#SELINUXTYPE=targeted 
   &nbsp; &nbsp;#注释掉&nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">SELINUX=disabled 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">SELINUX=disabled 
   &nbsp; &nbsp; &nbsp; &nbsp; #增加&nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:wq 
   #保存退出</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">shutdown 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">shutdown 
   -r now &nbsp; #重启系统</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-4">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>4</DIV>
+  <LI class="exp-content-list list-item-4" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">4</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">系统约定</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">系统约定</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">软件源代码包存放位置：/usr/local/src</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">软件源代码包存放位置：/usr/local/src</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">源码包编译安装位置：/usr/local/软件名字</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">源码包编译安装位置：/usr/local/软件名字</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>5</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">5</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">下载软件包</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">下载软件包</P></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">1、下载apache</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">编译安装apache，需要依赖另两个模块apr和apr-util 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">1、下载apache</P></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">编译安装apache，需要依赖另两个模块apr和apr-util 
+
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><A 
-  href="http://apr.apache.org/download.cgi">http://apr.apache.org/download.cgi</A>下载解压放到apache解压目录下的srclib</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf httpd-2.4.10.tar.gz    解压apache</FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf apr-1.5.1.tar.gz    解压apr</FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf apr-util-1.5.4.tar.gz    解压apr-util </FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">mv apr-1.5.1 httpd-2.4.10/srclib/apr
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><A 
+  href="http://apr.apache.org/download.cgi">http://apr.apache.org/download.cgi</A>下载解压放到apache解压目录下的srclib</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf httpd-2.4.10.tar.gz    解压apache</FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf apr-1.5.1.tar.gz    解压apr</FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>tar -zxvf apr-util-1.5.4.tar.gz    解压apr-util </FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">mv apr-1.5.1 httpd-2.4.10/srclib/apr
 mv apr-util-1.5.4 httpd-2.4.10/srclib/apr-util</PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>cd httpd-2.4.10</FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>./configure --with-included-apr --enable-nonportable-atomics=yes --with-z    配置apache</FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>make &amp;&amp; make install     编译安装apache</FONT></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5"><PRE style="PADDING-BOTTOM: 0px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 14px/24px arial, 'courier new', courier, 宋体, monospace; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; PADDING-TOP: 0px; -webkit-text-stroke-width: 0px" id=answer-content-662957502 class="answer-text mb-10" accuse="aContent">service iptables status 查看iptables状态<BR>service iptables restart iptables服务重启<BR>service iptables stop iptables服务禁用</PRE>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">安装完毕后， 所有的东西都在 /usr/local/apache2 这个目录下，最重要的当属 conf/httpd.conf ，自行配置吧。</P><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">加载模块上，我尽可能的做了精简，仅开启如下：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	必须：
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>cd httpd-2.4.10</FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>./configure --with-included-apr --enable-nonportable-atomics=yes --with-z    配置apache</FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><FONT style="BACKGROUND-COLOR: #ffffff" size=3 face=微软雅黑>make &amp;&amp; make install     编译安装apache</FONT></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px"><PRE id=answer-content-662957502 class="answer-text mb-10" style="WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT: 14px/24px arial, 'courier new', courier, 宋体, monospace; PADDING-LEFT: 0px; MARGIN: 0px 0px 10px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px" accuse="aContent">service iptables status 查看iptables状态<BR>service iptables restart iptables服务重启<BR>service iptables stop iptables服务禁用</PRE>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=content-list-text><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px"><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">安装完毕后， 所有的东西都在 /usr/local/apache2 这个目录下，最重要的当属 conf/httpd.conf ，自行配置吧。</P><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">加载模块上，我尽可能的做了精简，仅开启如下：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	必须：
 	LoadModule authz_host_module modules/mod_authz_host.so
 	LoadModule authz_core_module modules/mod_authz_core.so
 	LoadModule userdir_module modules/mod_userdir.so
 	LoadModule dir_module modules/mod_dir.so
-	LoadModule mime_module modules/mod_mime.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	设置超时：
-	LoadModule reqtimeout_module modules/mod_reqtimeout.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	以下三个都是为了配合 Google mod_pagespeed 才开启，不用可不开：
+	LoadModule mime_module modules/mod_mime.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	设置超时：
+	LoadModule reqtimeout_module modules/mod_reqtimeout.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	以下三个都是为了配合 Google mod_pagespeed 才开启，不用可不开：
 	LoadModule filter_module modules/mod_filter.so
 	LoadModule deflate_module modules/mod_deflate.so
-	LoadModule headers_module modules/mod_headers.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	Apache 日志：
-	LoadModule log_config_module modules/mod_log_config.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	指定 Apache 用户和组：
-	LoadModule unixd_module modules/mod_unixd.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	phpMyAdmin 要用：
-	LoadModule alias_module modules/mod_alias.so</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	wordpress, joomla 要用：
-	LoadModule rewrite_module modules/mod_rewrite.so</PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">还有很多配置文件在 /usr/local/apache2/conf/extra 下面，在 httpd.conf 中可以选择是否加载，我加载的部分有：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置 timeout, keepalive 的
-	httpd-default.conf</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置 apache mpm 的
+	LoadModule headers_module modules/mod_headers.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	Apache 日志：
+	LoadModule log_config_module modules/mod_log_config.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	指定 Apache 用户和组：
+	LoadModule unixd_module modules/mod_unixd.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	phpMyAdmin 要用：
+	LoadModule alias_module modules/mod_alias.so</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	wordpress, joomla 要用：
+	LoadModule rewrite_module modules/mod_rewrite.so</PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">还有很多配置文件在 /usr/local/apache2/conf/extra 下面，在 httpd.conf 中可以选择是否加载，我加载的部分有：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置 timeout, keepalive 的
+	httpd-default.conf</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置 apache mpm 的
 	httpd-mpm.conf
-	这个很重要，性能优化基本上就靠这个文件了</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置网站目录的
-	httpd-userdir.conf</PRE><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置虚拟主机的
-	httpd-vhosts.conf</PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">确定所有配置弄好后，就可以删除服务器上以前的 apache 了，至少我就是这么干的...：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	service httpd stop
-	yum remove httpd</PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">把新编译安装的 Apache 2.4.6 拷贝到位：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	cp /usr/local/apache2/bin/apachectl /etc/init.d/httpd</PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">编辑 /etc/init.d/httpd 文件，在首行 #!/bin/sh 下面加入两行：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	<FONT size=+0># chkconfig: 35 85 15
-	# description: Activates/Deactivates Apache 2.4.6</FONT></PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0>将 Apache 加入开机自</FONT>动启动：</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	chkconfig --add httpd
-	chkconfig httpd on</PRE><P style="BOX-SIZING: border-box; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">最后一步，启动编译好的 Apache 2.4.6：</P><PRE style="BOX-SIZING: border-box; BORDER-BOTTOM: rgb(204,204,204) 1px solid; BORDER-LEFT: rgb(204,204,204) 1px solid; PADDING-BOTTOM: 10px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; MARGIN: 0px 0px 11px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: block; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; WORD-WRAP: break-word; LETTER-SPACING: normal; COLOR: rgb(51,51,51); OVERFLOW: auto; WORD-BREAK: break-all; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; WORD-SPACING: 0px; PADDING-TOP: 10px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	service httpd start</PRE></PRE></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
+	这个很重要，性能优化基本上就靠这个文件了</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置网站目录的
+	httpd-userdir.conf</PRE><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	配置虚拟主机的
+	httpd-vhosts.conf</PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">确定所有配置弄好后，就可以删除服务器上以前的 apache 了，至少我就是这么干的...：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	service httpd stop
+	yum remove httpd</PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">把新编译安装的 Apache 2.4.6 拷贝到位：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	cp /usr/local/apache2/bin/apachectl /etc/init.d/httpd</PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">编辑 /etc/init.d/httpd 文件，在首行 #!/bin/sh 下面加入两行：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	<FONT size=+0># chkconfig: 35 85 15
+	# description: Activates/Deactivates Apache 2.4.6</FONT></PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0>将 Apache 加入开机自</FONT>动启动：</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	chkconfig --add httpd
+	chkconfig httpd on</PRE><P style="BOX-SIZING: border-box; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; MARGIN: 0px 0px 11px; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">最后一步，启动编译好的 Apache 2.4.6：</P><PRE style="BOX-SIZING: border-box; OVERFLOW: auto; WORD-WRAP: break-word; BORDER-TOP: rgb(204,204,204) 1px solid; BORDER-RIGHT: rgb(204,204,204) 1px solid; BORDER-BOTTOM: rgb(204,204,204) 1px solid; TEXT-TRANSFORM: none; WORD-BREAK: break-all; WORD-SPACING: 0px; COLOR: rgb(51,51,51); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; FONT: 13px/1.625 Monaco, Menlo, Consolas, 'Courier New', monospace; PADDING-LEFT: 10px; MARGIN: 0px 0px 11px; BORDER-LEFT: rgb(204,204,204) 1px solid; DISPLAY: block; LETTER-SPACING: normal; PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(245,245,245); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">	service httpd start</PRE></PRE></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">1.下载nginx</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">1.下载nginx</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp;http://nginx.org/download/nginx-1.2.0.tar.gz</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp;http://nginx.org/download/nginx-1.2.0.tar.gz</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">2、下载pcre 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">2、下载pcre 
   &nbsp;（支持nginx伪静态）</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.30.tar.gz</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.30.tar.gz</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">3、下载MySQL（目前稳定版）</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">3、下载MySQL（目前稳定版）</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><A 
   href="http://mysql.mirror.kangaroot.net/Downloads/MySQL-5.5/mysql-5.5.25.tar.gz">http://mysql.mirror.kangaroot.net/Downloads/MySQL-5.5/mysql-5.5.25.tar.gz</A></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><A 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><A 
   href="http://mysql.mirror.kangaroot.net/Downloads/MySQL-5.5/mysql-5.5.40.tar.gz">http://mysql.mirror.kangaroot.net/Downloads/MySQL-5.5/mysql-5.5.40.tar.gz</A></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">由于版本更新可能以前版本已不存在，可http://mysql.mirror.kangaroot.net/Downloads下载相应版本。</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
+  color=><FONT color=><FONT color=><FONT color=><FONT color=><FONT 
+  color=>由于版本更新可能以前版本已不存在，可http://</FONT>my</FONT>s</FONT>q</FONT>l.</FONT>mirror</FONT>.kangaroot.net/Downloads下载相应版本。</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">4、下载php</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">4、下载php</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">http://www.php.net/releases/</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">http://www.php.net/releases/</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">5、下载cmake（MySQL编译工具）</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">5、下载cmake（MySQL编译工具）</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">http://www.cmake.org/files/v2.8/cmake-2.8.8.tar.gz</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">http://www.cmake.org/files/v2.8/cmake-2.8.8.tar.gz</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">6、下载libmcrypt（PHPlibmcrypt模块）</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">6、下载libmcrypt（PHPlibmcrypt模块）</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/libmcrypt/libmcrypt-2.5.7.tar.gz</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>6</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">6</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装编译工具及库文件（使用CentOS 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装编译工具及库文件（使用CentOS 
   yum命令安装）</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">yum 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">yum 
   install make apr* autoconf automake curl-devel gcc gcc-c++ zlib-devel openssl 
   openssl-devel pcre-devel gd &nbsp;kernel keyutils &nbsp;patch &nbsp;perl 
   kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl 
@@ -341,13 +310,12 @@ mv apr-util-1.5.4 httpd-2.4.10/srclib/apr-util</PRE></DIV>
   krb5-devel zlib-devel libXpm* freetype libjpeg* libpng* php-common php-gd 
   ncurses* libtool* libxml2 libxml2-devel patch&nbsp;freetype-devel 
   bison-devel&nbsp; ncurses-devel</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><SPAN 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -421,28 +389,28 @@ mv apr-util-1.5.4 httpd-2.4.10/srclib/apr-util</PRE></DIV>
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
-  size=+0>yum install gcc</FONT> gcc-c++ gcc-g77 
-  fl</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></SPAN><A 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(8,65,214); WORD-SPACING: 0px; TEXT-DECORATION: none; -webkit-text-stroke-width: 0px" 
+  color=><FONT size=+0>yum install gcc</FONT> gcc-c++ gcc-g77 
+  fl</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></SPAN><A 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(8,65,214); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; TEXT-DECORATION: none; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px" 
   href="http://www.linuxso.com/command/ex.html" target=_blank><U 
-  style="WORD-WRAP: break-word"><FONT size=+0>ex</FONT></U></A><SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT 
-  size=+0>&nbsp;bison autoconf automake b</FONT></SPAN><A 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(8,65,214); WORD-SPACING: 0px; TEXT-DECORATION: none; -webkit-text-stroke-width: 0px" 
+  style="WORD-WRAP: break-word"><FONT color= size=+0>ex</FONT></U></A><SPAN 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px"><FONT 
+  color= size=+0>&nbsp;bison autoconf automake b</FONT></SPAN><A 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(8,65,214); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; TEXT-DECORATION: none; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px" 
   href="http://www.linuxso.com/command/zip.html" target=_blank><U 
-  style="WORD-WRAP: break-word"><FONT size=+0>zip</FONT></U></A><SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT 
-  size=+0>2-devel zlib-devel&nbsp;</FONT></SPAN><A 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(8,65,214); WORD-SPACING: 0px; TEXT-DECORATION: none; -webkit-text-stroke-width: 0px" 
+  style="WORD-WRAP: break-word"><FONT color= size=+0>zip</FONT></U></A><SPAN 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px"><FONT 
+  color= size=+0>2-devel zlib-devel&nbsp;</FONT></SPAN><A 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(8,65,214); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; TEXT-DECORATION: none; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px" 
   href="http://www.linuxso.com/command/nc.html" target=_blank><U 
-  style="WORD-WRAP: break-word"><FONT size=+0>nc</FONT></U></A><SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT 
-  size=+0>urses-devel libjpeg-devel libpng-devel 
+  style="WORD-WRAP: break-word"><FONT color= size=+0>nc</FONT></U></A><SPAN 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px"><FONT 
+  color= size=+0>urses-devel libjpeg-devel libpng-devel 
   libtiff-devel&nbsp;</FONT></SPAN><A 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(8,65,214); WORD-SPACING: 0px; TEXT-DECORATION: none; -webkit-text-stroke-width: 0px" 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(8,65,214); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; TEXT-DECORATION: none; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px" 
   href="http://www.linuxso.com/command/free.html" target=_blank><U 
-  style="WORD-WRAP: break-word"><FONT size=+0>free</FONT></U></A><SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT 
+  style="WORD-WRAP: break-word"><FONT color= size=+0>free</FONT></U></A><SPAN 
+  style="WORD-WRAP: break-word; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -520,61 +488,54 @@ mv apr-util-1.5.4 httpd-2.4.10/srclib/apr-util</PRE></DIV>
   libxml2</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>-devel</FONT></FONT> 
   gettext</FONT>-</FONT>devel 
   pcre</FONT>-</FONT>devel</FONT></FONT></FONT></FONT></FONT><FONT 
-  face=微软雅黑><FONT size=+0><FONT size=+0><FONT size=+0> 
+  face=微软雅黑><FONT size=+0><FONT size=+0><FONT size=+0> cmake 
   bison</FONT>-devel</FONT>&nbsp; 
   ncurses</FONT>-devel</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></SPAN></P></DIV></LI></OL></DIV>
-<OL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class=exp-conent-orderlist>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
+<OL class=exp-conent-orderlist 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">简单一点的话就直接：<SPAN 
-  style="TEXT-ALIGN: left; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; DISPLAY: inline !important; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(42,42,42); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">yum 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">简单一点的话就直接：<SPAN 
+  style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(42,42,42); TEXT-ALIGN: left; FONT: 16px/25px 'Segoe UI', Tahoma, Arial, sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(245,250,255); TEXT-INDENT: 28px; -webkit-text-stroke-width: 0px">yum 
   groupinstall "Development tools",但这个还是少了pcre-devel (安装apache要用到)</SPAN></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
-  class=last-item><SPAN 
-  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
-  class=last-item-end>END</SPAN></DIV></LI></OL></DIV>
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<H2 
-style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
-href="javascript:;" name=section-4></A>安装篇</H2>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
-<OL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class=exp-conent-orderlist>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
-  class=list-icon><FONT size=+0>1</FONT></DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <DIV class=last-item 
+  style="HEIGHT: 13px; POSITION: relative; MARGIN-TOP: 5px"><SPAN 
+  class=last-item-end 
+  style="FONT-SIZE: 12px; POSITION: absolute; COLOR: rgb(204,204,204); LEFT: -48px; DISPLAY: block; LINE-HEIGHT: 13px; BOTTOM: 0px; BACKGROUND-COLOR: rgb(255,255,255)">END</SPAN></DIV></LI></OL></DIV>
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<H2 class=exp-content-head 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; COLOR: rgb(51,51,51); PADDING-BOTTOM: 7px; PADDING-TOP: 0px; FONT: 400 22px/24px 微软雅黑; PADDING-LEFT: 0px; MARGIN: 40px 0px 0px; PADDING-RIGHT: 0px; font-stretch: normal"><A 
+style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" href="javascript:;" 
+name=section-4></A>安装篇</H2>
+<DIV class=exp-content-body style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<OL class=exp-conent-orderlist 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-1" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 35px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 0px; VISIBILITY: visible; WIDTH: 32px"><FONT 
+  size=+0>1</FONT></DIV>
   <H3 
-  style="PADDING-BOTTOM: 3px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(130,193,255); FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; MARGIN: 15px 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: verdana, Arial, Helvetica, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(255,255,255); FONT-SIZE: 16px; FONT-WEIGHT: bold; WORD-SPACING: 0px; PADDING-TOP: 3px; -webkit-text-stroke-width: 0px">安装编译代码需要的包</H3><PRE style="BORDER-BOTTOM: rgb(192,192,192) 1px dashed; BORDER-LEFT: rgb(108,226,108) 5px solid; PADDING-BOTTOM: 8px; LINE-HEIGHT: 18px; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; WORD-WRAP: break-word; WHITE-SPACE: pre-wrap; LETTER-SPACING: normal; COLOR: rgb(51,51,51); FONT-SIZE: 14px; BORDER-TOP: rgb(192,192,192) 1px dashed; FONT-WEIGHT: normal; BORDER-RIGHT: rgb(192,192,192) 1px dashed; WORD-SPACING: 0px; PADDING-TOP: 8px; -webkit-text-stroke-width: 0px" class=code>yum -y install cmake bison-devel  ncurses-devel</PRE>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
+  style="FONT-SIZE: 16px; FONT-FAMILY: verdana, Arial, Helvetica, sans-serif; FONT-VARIANT: normal; WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FONT-WEIGHT: bold; COLOR: rgb(255,255,255); PADDING-BOTTOM: 3px; FONT-STYLE: normal; PADDING-TOP: 3px; PADDING-LEFT: 3px; MARGIN: 15px 0px; LETTER-SPACING: normal; PADDING-RIGHT: 3px; BACKGROUND-COLOR: rgb(130,193,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">安装编译代码需要的包</H3><PRE class=code style="WORD-WRAP: break-word; FONT-SIZE: 14px; BORDER-TOP: rgb(192,192,192) 1px dashed; BORDER-RIGHT: rgb(192,192,192) 1px dashed; FONT-VARIANT: normal; WHITE-SPACE: pre-wrap; BORDER-BOTTOM: rgb(192,192,192) 1px dashed; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FONT-WEIGHT: normal; COLOR: rgb(51,51,51); PADDING-BOTTOM: 8px; FONT-STYLE: normal; PADDING-TOP: 8px; PADDING-LEFT: 8px; MARGIN: 0px; BORDER-LEFT: rgb(108,226,108) 5px solid; LETTER-SPACING: normal; LINE-HEIGHT: 18px; PADDING-RIGHT: 8px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">yum -y install cmake bison-devel  ncurses-devel</PRE>
+  <LI class="exp-content-list list-item-1" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 35px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0>安装cmake</FONT></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
+  <LI class="exp-content-list list-item-1" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 35px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0></FONT></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -584,7 +545,7 @@ class=exp-conent-orderlist>
   size=+0><FONT size=+0><FONT size=+0>cd 
   /usr/</FONT>local/src&nbsp;</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -594,7 +555,7 @@ class=exp-conent-orderlist>
   size=+0><FONT size=+0>tar zxvf</FONT> 
   cmake</FONT></FONT>-2.8.8.tar.gz&nbsp;</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -603,7 +564,7 @@ class=exp-conent-orderlist>
   size=+0><FONT size=+0><FONT size=+0>cd 
   cmake-2.8</FONT>.8&nbsp;</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -612,515 +573,517 @@ class=exp-conent-orderlist>
   size=+0>./configure make</FONT> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   #编译&nbsp;</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0>make install &nbsp; #安装</FONT></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-2">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>2</DIV>
+  <LI class="exp-content-list list-item-2" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">2</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装MySQL</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装MySQL</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">groupadd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">groupadd 
   mysql &nbsp;#添加mysql组 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">useradd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">useradd 
   -g mysql mysql -s /bin/false &nbsp;#创建用户mysql并加入到mysql组，不允许mysql用户直接登录系统 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">mkdir 
   -p /data/mysql &nbsp;#创建MySQL数据库存放目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chown 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chown 
   -R mysql:mysql /data/mysql &nbsp; #设置MySQL数据库目录权限 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">mkdir 
   -p /usr/local/mysql #创建MySQL安装目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/src &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">tar 
   zxvf mysql-5.5.25.tar.gz &nbsp;#解压 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   mysql-5.5.25 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cmake 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cmake 
   . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql &nbsp;-DMYSQL_DATADIR=/data/mysql 
-  &nbsp;-DSYSCONFDIR=/etc &nbsp; #配置 &nbsp; &nbsp;</P>
+  &nbsp;-DSYSCONFDIR=/etc &nbsp; #配置 &nbsp; &nbsp;</P></DIV>
+  <LI class="exp-content-list list-item-2" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">cmake 
+  -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql 
+  -DSYSCONFDIR=/etc -DWITH_MYISAM_STORAGE_ENGINE=1 
+  -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 
+  -DWITH_READLINE=1 -DMYSQL_UNIX_ADDR=/var/lib64/mysql/mysql.sock 
+  -DMYSQL_TCP_PORT=3306 -DENABLED_LOCAL_INFILE=1 
+  -DWITH_PARTITION_STORAGE_ENGINE=1 -DEXTRA_CHARSETS=all 
+  -DDEFAULT_CHARSET=utf8这个不行
+  <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp;</P>
+  <P 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   #编译 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   install &nbsp;#安装 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/mysql &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cp 
   ./support-files/my-huge.cnf &nbsp;/etc/my.cnf &nbsp; 
   #拷贝配置文件（注意：如果/etc目录下面默认有一个my.cnf，直接覆盖即可） &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /etc/my.cnf &nbsp; #编辑配置文件,在 [mysqld] 部分增加下面一行 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">datadir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">datadir 
   = /data/mysql &nbsp;#添加MySQL数据库路径 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:wq! 
   &nbsp;#保存退出 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./scripts/mysql_install_db 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">./scripts/mysql_install_db 
   --user=mysql &nbsp;#生成mysql系统数据库 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cp 
   ./support-files/mysql.server &nbsp;/etc/rc.d/init.d/mysqld &nbsp;#把Mysql加入系统启动 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chmod 
   755 /etc/init.d/mysqld &nbsp; #增加执行权限 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chkconfig 
   mysqld on &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /etc/rc.d/init.d/mysqld &nbsp;#编辑 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">basedir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">basedir 
   = /usr/local/mysql &nbsp; #MySQL程序安装路径 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">datadir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">datadir 
   = /data/mysql &nbsp;#MySQl数据库存放目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">service 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">service 
   mysqld start &nbsp;#启动 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /etc/profile &nbsp; #把mysql服务加入系统环境变量：在最后添加下面这一行 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">export 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">export 
   PATH=$PATH:/usr/local/mysql/bin &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:wq! 
   #保存退出 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">下面这两行把myslq的库文件链接到系统默认的位置，在编译类似PHP等软件时可以不用指定mysql的库文件地址。 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">下面这两行把myslq的库文件链接到系统默认的位置，在编译类似PHP等软件时可以不用指定mysql的库文件地址。 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">ln 
   -s /usr/local/mysql/lib/mysql /usr/lib64/mysql &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">ln 
   -s /usr/local/mysql/include/mysql /usr/include/mysql &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">shutdown 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">shutdown 
   -r now &nbsp; &nbsp; #需要重启系统，等待系统重新启动之后继续在终端命令行下面操作 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mysql_secure_installation 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">mysql_secure_installation 
   &nbsp; &nbsp;#设置Mysql密码 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">根据提示按Y 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">根据提示按Y 
   回车（默认密码为空） &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">然后输入2次密码 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">然后输入2次密码 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">继续按Y 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">继续按Y 
   回车，直到设置完成 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">或者直接修改密码/usr/local/mysql/bin/mysqladmin 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">或者直接修改密码/usr/local/mysql/bin/mysqladmin 
   -u root -p password "123456" #修改密码 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">service 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">service 
   mysqld restart &nbsp;#重启 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">到此，mysql安装完成！ 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">到此，mysql安装完成！ 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-3">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>3</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-3" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">3</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装pcre</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装pcre</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/src &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">mkdir 
   /usr/local/pcre &nbsp;#创建安装目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">tar 
   &nbsp;zxvf pcre-8.30.tar.gz &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   pcre-8.30 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">./configure 
   &nbsp;--prefix=/usr/local/pcre &nbsp;#配置 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   install &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-4">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>4</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-4" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">4</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装 
   nginx</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/src &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">groupadd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">groupadd 
   &nbsp;www &nbsp;#添加www组 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">useradd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">useradd 
   -g &nbsp;www www -s /bin/false &nbsp;#创建nginx运行账户www并加入到www组，不允许www用户直接登录系统 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">tar 
   &nbsp;zxvf nginx-1.2.0.tar.gz &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   nginx-1.2.0 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">./configure 
   --prefix=/usr/local/nginx --without-http_memcached_module --user=www 
   --group=www --with-http_stub_status_module --with-openssl=/usr/ 
   --with-pcre=/usr/local/src/pcre-8.30 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#注意:--with-pcre=/usr/local/src/pcre-8.30指向的是源码包解压的路径，而不是安装的路径，否则会报错 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">#注意:--with-pcre=/usr/local/src/pcre-8.30指向的是源码包解压的路径，而不是安装的路径，否则会报错 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   install &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/usr/local/nginx/sbin/nginx 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">/usr/local/nginx/sbin/nginx 
   &nbsp; #启动nginx &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /etc/rc.d/init.d/nginx &nbsp; &nbsp;#设置nginx开启启动，编辑启动文件添加下面内容 &nbsp; 
 &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">################################################################# 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">################################################################# 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#!/bin/bash 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">#!/bin/bash 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   nginx Startup script for the Nginx HTTP Server &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   it is v.0.0.2 version. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   chkconfig: - 85 15 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   description: Nginx is a high-performance web and proxy server. &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;It has a lot of features, but 
   it's not for everyone. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   processname: nginx &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   pidfile: /var/run/nginx.pid &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   config: /usr/local/nginx/conf/nginx.conf &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginxd=/usr/local/nginx/sbin/nginx 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">nginxd=/usr/local/nginx/sbin/nginx 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginx_config=/usr/local/nginx/conf/nginx.conf 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">nginx_config=/usr/local/nginx/conf/nginx.conf 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">nginx_pid=/usr/local/nginx/logs/nginx.pid 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">nginx_pid=/usr/local/nginx/logs/nginx.pid 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">RETVAL=0 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">RETVAL=0 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">prog="nginx" 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">prog="nginx" 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Source function library. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">. 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">. 
   &nbsp;/etc/rc.d/init.d/functions &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Source networking configuration. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">. 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">. 
   &nbsp;/etc/sysconfig/network &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Check that networking is up. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">[ 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">[ 
   ${NETWORKING} = "no" ] &amp;amp;&amp;amp; exit 0 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">[ 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">[ 
   -x $nginxd ] || exit 0 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Start nginx daemons functions. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">start() 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">start() 
   { &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">if 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">if 
   [ -e $nginx_pid ];then &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   echo "nginx already running...." &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   exit 1 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">fi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">fi 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   echo -n $"Starting $prog: " &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   daemon $nginxd -c ${nginx_config} &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   RETVAL=$? &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   echo &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   [ $RETVAL = 0 ] &amp;amp;&amp;amp; touch /var/lock/subsys/nginx &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   return $RETVAL &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">} 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   Stop nginx daemons functions. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">stop() 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">stop() 
   { &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;echo -n $"Stopping $prog: " &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;killproc $nginxd &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;echo &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;[ $RETVAL = 0 ] &amp;amp;&amp;amp; rm -f 
   /var/lock/subsys/nginx /usr/local/nginx/logs/nginx.pid &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">} 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">reload() 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">reload() 
   { &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;echo -n $"Reloading $prog: " &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;#kill -HUP `cat ${nginx_pid}` &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;killproc $nginxd -HUP &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;echo &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">} 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">} 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   See how we were called. &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">case 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">case 
   "$1" in &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">start) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">start) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;start &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">stop) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">stop) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;stop &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">reload) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">reload) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;reload &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">restart) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">restart) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;stop &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;start &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">status) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">status) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;status $prog &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;RETVAL=$? &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;;; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">*) 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">*) 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;echo $"Usage: $prog 
   {start|stop|restart|reload|status|help}" &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp; &nbsp; &nbsp;exit 1 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">esac 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">esac 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">exit 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">exit 
   $RETVAL &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">################################################################# 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">################################################################# 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">:wq! 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">:wq! 
   &nbsp;#保存退出 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chmod 
   775 &nbsp;/etc/rc.d/init.d/nginx &nbsp;#赋予文件执行权限 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chkconfig 
   nginx on &nbsp; &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/rc.d/init.d/nginx 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">/etc/rc.d/init.d/nginx 
   restart &nbsp; #重启 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-5">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>5</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-5" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">5</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装libmcrypt</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装libmcrypt</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/src &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">tar 
   zxvf &nbsp;libmcrypt-2.5.7.tar.gz &nbsp; #解压 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   &nbsp;libmcrypt-2.5.7 #进入目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">./configure 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">./configure 
   &nbsp; &nbsp;#配置 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #编译 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   install &nbsp; #安装 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>6</DIV>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P></DIV>
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">6</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">安装php</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">安装php</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   /usr/local/src &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">tar 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">tar 
   -zvxf php-5.3.13.tar.gz &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cd 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cd 
   &nbsp;php-5.3.13 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">mkdir 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">mkdir 
   -p /usr/local/php&nbsp;&nbsp;#建立php安装目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"><FONT 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
@@ -1285,7 +1248,7 @@ class=exp-conent-orderlist>
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT size=+0><FONT 
   size=+0><FONT size=+0><FONT size=+0><FONT size=+0>./configure 
   --prefix=/usr/local/php <SPAN 
-  style="TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/22px sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(102,102,102); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">--with-apxs2=/usr/local/apache2/bin/apxs</SPAN>&nbsp;--with-config-file-path=/usr/local/php/etc 
+  style="WHITE-SPACE: normal; TEXT-TRANSFORM: none; WORD-SPACING: 0px; FLOAT: none; COLOR: rgb(102,102,102); FONT: 14px/22px sans-serif; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px">--with-apxs2=/usr/local/apache2/bin/apxs</SPAN>&nbsp;--with-config-file-path=/usr/local/php/etc 
   --with-mysql</FONT>=/</FONT>usr</FONT>/local</FONT>/mysql 
   --with</FONT>-mysqli=/usr/local/mysql/bin/mysql_config 
   --with-mysql-sock=/tmp/mysql.sock --with-gd --with-iconv 
@@ -1301,69 +1264,67 @@ class=exp-conent-orderlist>
   --with-</FONT>jpeg</FONT>-dir 
   --with</FONT>-freet</FONT></FONT>ype</FONT></FONT></FONT></FONT></FONT>-</FONT></FONT>dir</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT> 
   #配置 &nbsp; &nbsp;</FONT></P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">--enable-fpm 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">--enable-fpm 
   和 --with-apxs2不能同时存在，</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-6">
+  <LI class="exp-content-list list-item-6" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   &nbsp; #编译 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">make 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">make 
   install &nbsp; &nbsp;#安装 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cp 
   &nbsp;php.ini-production &nbsp; /usr/local/php5/etc/php.ini 
   &nbsp;#复制php配置文件到安装目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">rm 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">rm 
   -rf /etc/php.ini &nbsp; #删除系统自带配置文件 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">ln 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">ln 
   -s /usr/local/php5/etc/php.ini &nbsp;/etc/php.ini &nbsp; &nbsp;#添加软链接 &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cp 
   &nbsp;/usr/local/php5/etc/php-fpm.conf.default &nbsp; 
   /usr/local/php5/etc/php-fpm.conf &nbsp; &nbsp; &nbsp;#拷贝模板文件为php-fpm配置文件 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   &nbsp;/usr/local/php5/etc/php-fpm.conf &nbsp;#编辑 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">user 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">user 
   = www &nbsp; &nbsp;#设置php-fpm运行账号为www &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">group 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">group 
   = www &nbsp; #设置php-fpm运行组为www &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">pid 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">pid 
   = run/php-fpm.pid &nbsp; &nbsp;#取消前面的分号 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">cp 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">cp 
   sapi/fpm/init.d.php-fpm &nbsp; /etc/rc.d/init.d/php-fpm &nbsp;#设置 
   php-fpm开机启动，拷贝php-fpm到启动目录 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chmod 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chmod 
   +x /etc/rc.d/init.d/php-fpm &nbsp;#添加执行权限 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">chkconfig 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">chkconfig 
   php-fpm on &nbsp; &nbsp;#设置开机启动 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /usr/local/php5/etc/php.ini &nbsp; &nbsp;#编辑配置文件 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：disable_functions 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">找到：disable_functions 
   = &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：disable_functions 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">修改为：disable_functions 
   = 
   passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,escapeshellcmd,dll,popen,disk_free_space,checkdnsrr,checkdnsrr,getservbyname,getservbyport,disk_total_space,posix_ctermid,posix_get_last_error,posix_getcwd, 
   posix_getegid,posix_geteuid,posix_getgid, 
@@ -1374,133 +1335,123 @@ class=exp-conent-orderlist>
   posix_setpgid,posix_setsid,posix_setuid,posix_strerror,posix_times,posix_ttyname,posix_uname 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">#列出PHP可以禁用的函数，如果某些程序需要用到这个函数，可以删除，取消禁用。 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">#列出PHP可以禁用的函数，如果某些程序需要用到这个函数，可以删除，取消禁用。 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：;date.timezone 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">找到：;date.timezone 
   = &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：date.timezone 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">修改为：date.timezone 
   = PRC &nbsp; #设置时区 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">找到：expose_php 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">找到：expose_php 
   = On &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">修改为：expose_php 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">修改为：expose_php 
   = OFF &nbsp;#禁止显示php版本的信息 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">PS：在编译PHP的过程中可能会报UNDEFINED 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">PS：在编译PHP的过程中可能会报UNDEFINED 
   REFERENCE TO `LIBICONV_OPEN 无法编译PHP LIBICONV错误.</P></DIV>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 45px" 
-  class="exp-content-list list-item-7">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 43px; LEFT: -18px" 
-  class=list-icon>7</DIV>
+  <LI class="exp-content-list list-item-7" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 45px; PADDING-LEFT: 35px; MARGIN: 1px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 43px; VISIBILITY: visible; WIDTH: 32px">7</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">配置nginx支持php</P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">配置nginx支持php</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">vi 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">vi 
   /usr/local/nginx/conf/nginx.conf &nbsp; &nbsp; &nbsp;#编辑配置文件 &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">user 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">user 
   &nbsp; www &nbsp;www; &nbsp; &nbsp; &nbsp; &nbsp; 
   &nbsp;#首行user去掉注释,修改Nginx运行组为www 
   www；必须与/usr/local/php5/etc/php-fpm.conf中的user,group配置相同，否则php运行出错 &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">index 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">index 
   &nbsp;index.php &nbsp;index.html index.htm; &nbsp; &nbsp;#添加index.php &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000 &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"># 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"># 
   &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">location 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">location 
   ~ \.php$ { &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;root &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   html;#此处和server下面root保持一致,默认为html &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;fastcgi_pass &nbsp; 127.0.0.1:9000; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;fastcgi_index &nbsp;index.php; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;fastcgi_param &nbsp;SCRIPT_FILENAME &nbsp; 
   /usr/local/nginx/html/$fastcgi_script_name; &nbsp; &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp; 
   &nbsp;include &nbsp; &nbsp; &nbsp; &nbsp;fastcgi_params;&nbsp; &nbsp; 
   &nbsp;</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">注意：取消FastCGI 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">注意：取消FastCGI 
   server部分location的注释,并要注意fastcgi_param行的参数,改为/data/webroot/(此为网站根目录绝对路径)$fastcgi_script_name</P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px"></P>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"></P>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">/etc/init.d/nginx 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">/etc/init.d/nginx 
   restart &nbsp;#重启nginx</P></DIV>
-  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
-  class=last-item><SPAN 
-  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
-  class=last-item-end>END</SPAN></DIV></LI></OL></DIV></DIV>
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<H2 
-style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
-href="javascript:;" name=section-5></A>测试篇</H2>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
-<OL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class=exp-conent-orderlist>
-  <LI 
-  style="POSITION: relative; BORDER-LEFT: rgb(228,228,228) 2px dotted; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; PADDING-LEFT: 35px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
-  <DIV 
-  style="POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 32px; WIDTH: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; HEIGHT: 32px; VISIBILITY: visible; COLOR: rgb(238,255,238); FONT-SIZE: 16px; TOP: 0px; LEFT: -18px" 
-  class=list-icon>1</DIV>
+  <DIV class=last-item 
+  style="HEIGHT: 13px; POSITION: relative; MARGIN-TOP: 5px"><SPAN 
+  class=last-item-end 
+  style="FONT-SIZE: 12px; POSITION: absolute; COLOR: rgb(204,204,204); LEFT: -48px; DISPLAY: block; LINE-HEIGHT: 13px; BOTTOM: 0px; BACKGROUND-COLOR: rgb(255,255,255)">END</SPAN></DIV></LI></OL></DIV></DIV>
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<H2 class=exp-content-head 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; COLOR: rgb(51,51,51); PADDING-BOTTOM: 7px; PADDING-TOP: 0px; FONT: 400 22px/24px 微软雅黑; PADDING-LEFT: 0px; MARGIN: 40px 0px 0px; PADDING-RIGHT: 0px; font-stretch: normal"><A 
+style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" href="javascript:;" 
+name=section-5></A>测试篇</H2>
+<DIV class=exp-content-body style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<OL class=exp-conent-orderlist 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-1" 
+  style="POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 35px; MARGIN: 20px 0px 0px 17px; MIN-HEIGHT: 31px; BORDER-LEFT: rgb(228,228,228) 2px dotted; DISPLAY: block; PADDING-RIGHT: 0px">
+  <DIV class=list-icon 
+  style="FONT-SIZE: 16px; HEIGHT: 32px; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/step_ol_bg.png) no-repeat; POSITION: absolute; COLOR: rgb(238,255,238); TEXT-ALIGN: center; LEFT: -18px; LINE-HEIGHT: 32px; TOP: 0px; VISIBILITY: visible; WIDTH: 32px">1</DIV>
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">访问http://ip地址&nbsp;&nbsp; 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">访问http://ip地址&nbsp;&nbsp; 
   &nbsp;出现欢迎使用nginx，说明配置成功。默认web目录&nbsp;/usr/local/nginx/html/可以自己写程序测试PHP是否可用。</P></DIV>
-  <DIV style="POSITION: relative; MARGIN-TOP: 5px; HEIGHT: 13px" 
-  class=last-item><SPAN 
-  style="POSITION: absolute; LINE-HEIGHT: 13px; BACKGROUND-COLOR: rgb(255,255,255); BOTTOM: 0px; DISPLAY: block; COLOR: rgb(204,204,204); FONT-SIZE: 12px; LEFT: -48px" 
-  class=last-item-end>END</SPAN></DIV></LI></OL></DIV></DIV>
-<DIV 
-style="LINE-HEIGHT: 28px; MARGIN-TOP: 40px; COLOR: rgb(51,51,51); FONT-SIZE: 16px" 
-class=exp-content-block>
-<H2 
-style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; PADDING-BOTTOM: 7px; MARGIN: 40px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 400 22px/24px 微软雅黑; COLOR: rgb(51,51,51); PADDING-TOP: 0px; font-stretch: normal" 
-class=exp-content-head><A style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" 
-href="javascript:;" name=section-6></A>注意事项</H2>
-<DIV style="TEXT-ALIGN: justify; MARGIN-TOP: 5px" class=exp-content-body>
-<UL 
-style="PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px" 
-class="exp-content-unorderlist ">
-  <LI 
-  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-1">
+  <DIV class=last-item 
+  style="HEIGHT: 13px; POSITION: relative; MARGIN-TOP: 5px"><SPAN 
+  class=last-item-end 
+  style="FONT-SIZE: 12px; POSITION: absolute; COLOR: rgb(204,204,204); LEFT: -48px; DISPLAY: block; LINE-HEIGHT: 13px; BOTTOM: 0px; BACKGROUND-COLOR: rgb(255,255,255)">END</SPAN></DIV></LI></OL></DIV></DIV>
+<DIV class=exp-content-block 
+style="FONT-SIZE: 16px; COLOR: rgb(51,51,51); MARGIN-TOP: 40px; LINE-HEIGHT: 28px">
+<H2 class=exp-content-head 
+style="BORDER-BOTTOM: rgb(214,214,216) 1px solid; COLOR: rgb(51,51,51); PADDING-BOTTOM: 7px; PADDING-TOP: 0px; FONT: 400 22px/24px 微软雅黑; PADDING-LEFT: 0px; MARGIN: 40px 0px 0px; PADDING-RIGHT: 0px; font-stretch: normal"><A 
+style="COLOR: rgb(45,100,179); TEXT-DECORATION: none" href="javascript:;" 
+name=section-6></A>注意事项</H2>
+<DIV class=exp-content-body style="TEXT-ALIGN: justify; MARGIN-TOP: 5px">
+<UL class="exp-content-unorderlist " 
+style="LIST-STYLE-TYPE: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; CLEAR: both; MARGIN: 0px; PADDING-RIGHT: 0px">
+  <LI class="exp-content-list list-item-1" 
+  style="BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 25px; MARGIN: 0px; MIN-HEIGHT: 31px; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">操作系统：CentOS 
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">操作系统：CentOS 
   6.2 32位</P></DIV>
-  <LI 
-  style="POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 31px; PADDING-LEFT: 25px; PADDING-RIGHT: 0px; DISPLAY: block; BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; PADDING-TOP: 0px" 
-  class="exp-content-list list-item-2">
+  <LI class="exp-content-list list-item-2" 
+  style="BACKGROUND: url(http://img.baidu.com/img/iknow/exp/global/unsortlist.png) no-repeat 0px 8px; POSITION: relative; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 25px; MARGIN: 0px; MIN-HEIGHT: 31px; DISPLAY: block; PADDING-RIGHT: 0px">
   <DIV class=content-list-text>
   <P 
-  style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px">源码的下载地址由于版本更新可能有变化，请大家自行百度下载</P></DIV></LI></UL></DIV></DIV></DIV></BODY></HTML>
+  style="PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">源码的下载地址由于版本更新可能有变化，请大家自行百度下载</P></DIV></LI></UL></DIV></DIV></DIV></BODY></HTML>
