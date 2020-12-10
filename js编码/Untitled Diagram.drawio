@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-10T11:00:04.283Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="LTON1b5hTFPS-PlT8nPv" version="13.10.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-10T11:00:32.944Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="vkacsjLnhwlkfhrhEJsj" version="13.10.0" type="github">
   <diagram id="SH6KypQ4c033o2f8ejVJ" name="Page-1">
     <mxGraphModel dx="1138" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -35,25 +35,25 @@
           <mxGeometry x="290" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-12" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="350" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="354" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-13" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="404" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-14" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="454" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-16" value="(EBS: Block Manager)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="190" y="360" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-18" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="512.5" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="518.5" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-19" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="562.5" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="568.5" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-20" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="612.5" y="420" width="40" height="50" as="geometry" />
+          <mxGeometry x="618.5" y="420" width="40" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h6BiR5mMiHGRbanZxWSa-22" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/storage/Data_Box_Edge.svg;" vertex="1" parent="1">
           <mxGeometry x="514.5" y="361" width="67" height="48" as="geometry" />
